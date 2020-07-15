@@ -10,18 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.leyou.common</groupId>
-    <artifactId>ly-registry</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
+    <artifactId>ly-common</artifactId>
 
 
 </project>
