@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @date 2020/7/14 10:49
  * @describe
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.leyou"})
 @EnableDiscoveryClient
 public class LyItemService {
     public static void main(String[] args) {
