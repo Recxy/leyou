@@ -38,3 +38,5 @@ eureka:
 logging:
   config: classpath:logback-spring.xml
   path: E:/logs/leyou/item
+exception:
+  path: business-exceptions.properties

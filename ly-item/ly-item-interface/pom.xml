@@ -12,5 +12,12 @@
     <groupId>com.leyou.service</groupId>
     <artifactId>ly-item-interface</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
