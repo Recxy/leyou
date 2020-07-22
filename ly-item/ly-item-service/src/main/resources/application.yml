@@ -40,3 +40,5 @@ logging:
   path: E:/logs/leyou/item
 exception:
   path: business-exceptions.properties
+mapper:
+  scan: com.leyou.item.mapper

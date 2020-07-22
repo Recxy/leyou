@@ -5,7 +5,7 @@ import com.leyou.common.config.DruidConfig;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
+import com.leyou.common.config.mybatis.scan.MapperScan;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,7 @@ import java.util.Properties;
 @AutoConfigureAfter({DruidConfig.class})
 //此注解可以不添加，但是却要在你的mapper接口中添加@Mapper注解或者在你的启动类中添加下面这个注解，
 // 这样容器才会加载mapper Bean。这三个注解中选用一个
-@MapperScan(basePackages = {"com.leyou.item.mapper"})
+@MapperScan(basePackages = {"${mapper.scan}"})
 public class MybatisConfig {
 
     @Bean(name = "transactionManager")
