@@ -8,20 +8,22 @@ import org.apache.commons.lang.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 @Data
+@Component
 public class BusinessException extends Exception {
 
     private static final long serialVersionUID = -4648879327187605014L;
     private static Map<String, String> CODES_MAP = null;
     private static final String DEFAULT_ERROR_CODE_MESSAGE = "系统内部错误";
     private static final String UNDEFINED_ERROR = "未定义错误";
-    @Value("${exception.path}")
-    private static String EXCEPTION_MESSAGE_PROPERTIES ;
+    private static final String EXCEPTION_MESSAGE_PROPERTIES = "business-exceptions.properties";
     private final static Logger logger = LoggerFactory.getLogger(BusinessException.class);
 
     /**

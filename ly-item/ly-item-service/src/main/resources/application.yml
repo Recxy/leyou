@@ -37,8 +37,10 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}
 logging:
   config: classpath:logback-spring.xml
-  path: E:/logs/leyou/item
-exception:
-  path: business-exceptions.properties
+#  level:
+#    com.leyou.item.mapper: debug
+log:
+  file: E:/logs/leyou/item/leyou-item.log
+  maxsize: 30MB
 mapper:
   scan: com.leyou.item.mapper

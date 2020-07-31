@@ -28,16 +28,18 @@ public class BasePageResult<T> {
      */
     private String message;
 
-    private Integer totalSize;
+    private Long totalSize;
 
-    public BasePageResult(T data, Integer totalSize) {
+    public BasePageResult(){}
+
+    public BasePageResult(T data, Long totalSize) {
         this.data = data;
         this.code = SUCCESS_CODE;
         this.message = SUCCESS_MESSAGE;
         this.totalSize = totalSize;
     }
 
-    public BasePageResult(T data, String code, String message, Integer totalSize) {
+    public BasePageResult(T data, String code, String message, Long totalSize) {
         this.code = code;
         this.data = data;
         this.message = message;
